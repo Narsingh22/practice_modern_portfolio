@@ -1,0 +1,65 @@
+@include mediaXl {
+    .my-projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include mediaLg {
+    .my-projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include mediaMd {
+    p.l-sz {
+        font-size: 5rem;
+    }
+
+    p span.secondary {
+        font-size: 5rem;
+    }
+
+    p.s-sz {
+        font-size: 1.3rem;
+    }
+
+    main {
+        text-align: center;
+    }
+
+    .bio {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .professions {
+        flex-direction: column;
+        
+        .profession {
+            margin-bottom: 10px;
+        }
+    }
+
+    .my-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@include mediaSm {
+    .my-projects {
+        grid-template-columns: 1fr;
+    }
+
+    main#home {
+        padding: 10vh 0.5rem;
+    }
+
+    main#about, main#project, main#contact {
+        padding: 0.5rem;
+    }
+
+    div.my-contacts {
+        padding: 10px 20px;
+    }
+}
