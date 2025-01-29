@@ -45,7 +45,7 @@
     .menu-parent .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-parent .menu-branding .portrait {
-      background-image: url(/images/portrait.jpeg);
+      background-image: url(../images/portrait.jpeg);
       background-position: center;
       background-size: cover;
       width: 250px;
@@ -83,7 +83,7 @@ body {
   margin: 0;
   line-height: 1.5; }
   body#background-img {
-    background-image: url(/images/body-background.jpeg);
+    background-image: url(../images/body-background.jpeg);
     background-size: cover;
     background-attachment: fixed; }
     body#background-img:after {
