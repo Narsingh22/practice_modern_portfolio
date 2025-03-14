@@ -37,6 +37,7 @@
         
         .profession {
             margin-bottom: 10px;
+            
         }
     }
 
@@ -46,6 +47,10 @@
 }
 
 @include mediaSm {
+    p.l-sz, p.l-sz span {
+        font-size: 4rem;
+    }
+
     .my-projects {
         grid-template-columns: 1fr;
     }
@@ -60,5 +65,11 @@
 
     div.my-contacts {
         padding: 10px 20px;
+    }
+
+    div.portrait {
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
     }
 }

@@ -1,5 +1,5 @@
 @import "config";
-@import "menu";
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -23,7 +23,6 @@ body {
 
 main {
     padding: 4rem;
-    min-height: calc(100vh - 60px);
     color: #fff;
 
     &#home {
@@ -91,6 +90,7 @@ main {
                     background: lighten($primary-color, 5);
                     padding: 10px 20px 16px 8px;
                     border-bottom: $secondary-color 5px solid;
+                    width: 50%;
             
                     h4 {
                         margin: 20px 0;
@@ -131,14 +131,8 @@ main {
                         margin-right: 4px;
                     }
 
-                    &.github {
-                        background-color: #000;
-                        color: #fff;
-
-                        &:hover {
-                            background-color: $secondary-color;
-                            color: #000;
-                        }
+                    &.eye {
+                        width: 100%;
                     }
 
                     &.eye:hover {
