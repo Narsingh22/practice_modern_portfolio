@@ -38,59 +38,6 @@
   width: 100%;
   visibility: hidden;
 }
-.menu-parent .menu-branding, .menu-parent .menu-btn-parent {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  float: left;
-  width: 50%;
-  height: 100vh;
-}
-.menu-parent .menu-branding {
-  background: rgba(70.55, 70.55, 70.55, 0.6);
-  transform: translate3d(0, 100%, 0);
-  transition: all 0.5s ease-out;
-}
-.menu-parent .menu-branding.show {
-  transform: translate3d(0, 0, 0);
-}
-.menu-parent .menu-branding .portrait {
-  background-image: url(../images/portrait.JPG);
-  background-position: top;
-  background-size: cover;
-  width: 250px;
-  height: 250px;
-  border: 2px solid #eece1a;
-  border-radius: 50%;
-}
-.menu-parent .menu-btn-parent {
-  background: rgba(65.45, 65.45, 65.45, 0.8);
-  transform: translate3d(0, -102%, 0);
-  transition: all 0.5s ease-out;
-}
-.menu-parent .menu-btn-parent.show {
-  transform: translate3d(0, -2%, 0);
-}
-.menu-parent .menu-btn-parent .menu-btn {
-  list-style-type: none;
-  transition: all 0.5s ease-out;
-}
-.menu-parent .menu-btn-parent .menu-btn a {
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 1.7rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.menu-parent .menu-btn-parent .menu-btn a:hover {
-  color: #eece1a;
-}
-.menu-parent .menu-btn-parent .menu-btn.current > a {
-  color: #eece1a;
-}
 
 * {
   box-sizing: border-box;
@@ -103,7 +50,7 @@ body {
   line-height: 1.5;
 }
 body#background-img {
-  background-image: url(/images/body-background.jpeg);
+  background-image: url(/dist/images/body-background.jpeg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -184,7 +131,7 @@ main#about .about-info .professions .profession, main#about .my-projects .profes
   background: rgb(80.75, 80.75, 80.75);
   padding: 10px 20px 16px 8px;
   border-bottom: #eece1a 5px solid;
-  width: 50%;
+  width: 100%;
 }
 main#about .about-info .professions .profession h4, main#about .my-projects .professions .profession h4, main#project .about-info .professions .profession h4, main#project .my-projects .professions .profession h4, main#contact .about-info .professions .profession h4, main#contact .my-projects .professions .profession h4 {
   margin: 20px 0;
@@ -195,6 +142,7 @@ main#about .my-projects, main#project .my-projects, main#contact .my-projects {
 }
 main#about .my-projects img, main#project .my-projects img, main#contact .my-projects img {
   width: 100%;
+  height: 30vh;
   border: 4px solid #fff;
   cursor: pointer;
 }
@@ -229,39 +177,140 @@ main#about .boxes, main#project .boxes, main#contact .boxes {
   justify-content: space-evenly;
   align-items: center;
 }
-main#about .my-contacts, main#project .my-contacts, main#contact .my-contacts {
+main#about .boxes .contact-me, main#project .boxes .contact-me, main#contact .boxes .contact-me {
   border: 3px solid #fff;
-  padding: 1.5rem 2.5rem;
-  font-size: 30px;
+  width: 100%;
+  padding: 1.5rem 1.5rem;
+  font-size: 2rem;
   margin-bottom: 50px;
+  overflow: scroll;
   transition: all 0.5s ease-out;
 }
-main#about .my-contacts:hover, main#project .my-contacts:hover, main#contact .my-contacts:hover {
+main#about .boxes .contact-me:hover, main#project .boxes .contact-me:hover, main#contact .boxes .contact-me:hover {
   padding: 10px 20px;
   transition: all 0.5s ease-out;
   background-color: #eece1a;
   color: #000;
 }
-main#about .my-contacts:hover .secondary, main#project .my-contacts:hover .secondary, main#contact .my-contacts:hover .secondary {
+main#about .boxes .contact-me:hover .secondary, main#project .boxes .contact-me:hover .secondary, main#contact .boxes .contact-me:hover .secondary {
   color: black;
   transition: all 0.5s ease-out;
-}
-
-#main-footer {
-  background-color: rgb(42.5, 42.5, 42.5);
-  text-align: center;
-  color: #fff;
-  padding: 0.1rem;
 }
 
 @media screen and (min-width: 1171px) {
   .my-projects {
     grid-template-columns: repeat(4, 1fr);
   }
+  .portrait {
+    background-image: url(../images/portrait.JPG);
+    background-position: top;
+    background-size: cover;
+    width: 30%;
+    height: 25%;
+    border: 2px solid #eece1a;
+    border-radius: 50%;
+  }
+  .menu-branding, .menu-btn-parent {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+  }
+  .menu-branding {
+    background: rgba(70.55, 70.55, 70.55, 0.6);
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-btn-parent {
+    background: rgba(65.45, 65.45, 65.45, 0.8);
+    transform: translate3d(0, -102%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn-parent.show {
+    transform: translate3d(0, -2%, 0);
+  }
+  .menu-btn {
+    list-style-type: none;
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .menu-btn a:hover {
+    color: #eece1a;
+  }
+  .menu-btn.current > a {
+    color: #eece1a;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .my-projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .portrait {
+    background-image: url(../images/portrait.JPG);
+    background-position: top;
+    background-size: cover;
+    width: 50%;
+    height: 30%;
+    border: 2px solid #eece1a;
+    border-radius: 50%;
+  }
+  .menu-branding, .menu-btn-parent {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+  }
+  .menu-branding {
+    background: rgba(70.55, 70.55, 70.55, 0.6);
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-btn-parent {
+    background: rgba(65.45, 65.45, 65.45, 0.8);
+    transform: translate3d(0, -102%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn-parent.show {
+    transform: translate3d(0, -2%, 0);
+  }
+  .menu-btn {
+    list-style-type: none;
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .menu-btn a:hover {
+    color: #eece1a;
+  }
+  .menu-btn.current > a {
+    color: #eece1a;
   }
 }
 @media screen and (max-width: 768px) {
@@ -286,6 +335,63 @@ main#about .my-contacts:hover .secondary, main#project .my-contacts:hover .secon
   }
   .professions .profession {
     margin-bottom: 10px;
+    width: 25%;
+  }
+  .contact-me span {
+    font-size: 1.5rem;
+  }
+  .portrait {
+    background-image: url(../images/portrait.JPG);
+    background-position: top;
+    background-size: cover;
+    width: 50%;
+    height: 20%;
+    border: 2px solid #eece1a;
+    border-radius: 50%;
+  }
+  .menu-branding, .menu-btn-parent {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+  }
+  .menu-branding {
+    background: rgba(70.55, 70.55, 70.55, 0.6);
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-btn-parent {
+    background: rgba(65.45, 65.45, 65.45, 0.8);
+    transform: translate3d(0, -102%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn-parent.show {
+    transform: translate3d(0, -2%, 0);
+  }
+  .menu-btn {
+    list-style-type: none;
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .menu-btn a:hover {
+    color: #eece1a;
+  }
+  .menu-btn.current > a {
+    color: #eece1a;
   }
   .my-projects {
     grid-template-columns: repeat(2, 1fr);
@@ -304,13 +410,34 @@ main#about .my-contacts:hover .secondary, main#project .my-contacts:hover .secon
   main#about, main#project, main#contact {
     padding: 0.5rem;
   }
-  div.my-contacts {
-    padding: 10px 20px;
+  .contact-me span {
+    font-size: 1rem;
   }
-  div.portrait {
-    width: 150px;
-    height: 150px;
-    border: 2px solid black;
+  .portrait {
+    width: 40vw;
+    height: 20vh;
+  }
+  .menu-branding, .menu-btn-parent {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  .menu-branding .show, .menu-btn-parent .show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(-102%, 0, 0);
+  }
+  .menu-btn-parent {
+    height: 65vh;
+    background: rgba(65.45, 65.45, 65.45, 0.8);
+    transform: translate3d(100%, 0, 0);
+    padding-right: 50px;
   }
 }
 
